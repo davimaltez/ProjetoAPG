@@ -123,7 +123,7 @@ Deve retornar `OK` e inserir uma linha na planilha.
 
 ---
 
-## Criando o gráfico no Google Sheets (passo a passo rápido)
+## Criando o gráfico no Google Sheets 
 
 1. Selecione a coluna `timestamp` (A) e `corrente1` (C) — ou selecione `A:E` para várias séries.
 2. Menu: **Inserir → Gráfico**.
