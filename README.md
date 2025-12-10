@@ -13,11 +13,15 @@ O Arduino faz leituras dos sensores (ACS712) e envia linhas CSV pela Serial para
 ```
 ProjetoAPG/
 │
+├── esquema_circuito/
+│   └── circuito.png
+│
 ├── arduino/
 │   └── arduino.ino
 │
 └── esp32/
-    └── esp32.ino
+    └── esp32.ino 
+
 ```
 
 ## Requisitos
