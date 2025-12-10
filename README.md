@@ -91,17 +91,27 @@ function handleRequest(e) {
 4. Copie a URL que termina em `/exec` — essa será `scriptURL` no código do ESP32.
 
 ---
+## Integração com CallMeBot (opcional)
+1. Adicione o número *+34 623 78 95 95* ao seu WhatsApp;
+2. Envie a seguinte mensagem:
+
+   ```
+   I allow callmebot to send me messages
+   ```
+4. Após isso, o bot enviará sua API_KEY.
+   
+Acesse o site [CallMeBot](https://www.callmebot.com/blog/free-api-whatsapp-messages/) para mais informações.
 
 ## Código do ESP32(variáveis a ajustar)
 
 No `esp32/esp32.ino` atualize:
 
 ```cpp
-const char* ssid = "SEU_SSID";
-const char* password = "SUA_SENHA";
+const char* ssid = "SUA_REDE_WIFI";
+const char* password = "SUA_SENHA_WIFI";
 const char* scriptURL = "https://script.google.com/macros/s/SEU_ID/exec";
 const char* phoneNumber = "+55SEUNUMERO"; // se for usar CallMeBot
-const char* apiKey = "SUA_APIKEY";         // se for usar CallMeBot
+const char* apiKey = "SUA_API_KEY";         // se for usar CallMeBot
 const float GATO_LIMITE = 0.300; // A
 ```
 
