@@ -7,7 +7,7 @@ const int SAMPLES_READ = 500;   // amostras por leitura (média)
 const float ADC_TO_V = 5.0 / 1023.0; // Conversão ADC->Volts (UNO)
 const float SENSITIVITY = 0.185;     // Sensibilidade ACS712-5A (V/A)
 
-float offset1 = 2.5; // inicial (será calibrado)
+float offset1 = 2.5; // offset inicial de cada sensor (será calibrado)
 float offset2 = 2.5;
 
 void setup() { //Calibração Inicial
