@@ -24,6 +24,8 @@ const char* apiKey = "7722631";
 #define RX2_PIN 16
 #define TX2_PIN 17
 
+//Variáveis de Controle
+
 bool alertaEnviado = false; //Evita enviar alerta repetido
 
 // Controle do envio da planilha
@@ -113,7 +115,9 @@ void sendMessage(String message) {
 
 void loop() {
   if (Serial2.available()) {
+
     String linha = Serial2.readStringUntil('\n');
+
     linha.trim(); //remove espaços vazios
 
     if (linha.length() == 0) return;
@@ -134,6 +138,7 @@ void loop() {
     // ENVIO PARA A PLANILHA (1x/segundo)
     
     unsigned long now = millis();
+    
     if (now - lastSheetsSend > sheetsInterval) {
       enviarParaPlanilha(V1, C1, V2, C2);
       lastSheetsSend = now;
